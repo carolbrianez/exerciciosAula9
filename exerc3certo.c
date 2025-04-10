@@ -1,23 +1,22 @@
 #include <stdio.h>
 
-void subtrai3(int* numero) {  
-    *numero = *numero - 3;   
-}
+void subtrai3(int* numero);
 
 int main(void) {
-    int numero;
+    int n;
     
     printf("digite um numero: ");
+    scanf("%d", &n); 
     
-    scanf("%d", &numero); 
+    printf("recebido: %d\n", n);
     
-    printf("recebido: %d\n", numero);
+    subtrai3(&n); 
     
-    subtrai3(&numero); 
-    
-    printf("resultado: %d\n", numero); 
-    
-    printf("atual: %d\n", numero);
-    
+    printf("resultado: %d\n", n); 
     return 0;
+}
+
+void subtrai3 (int *numero) {
+    *numero = *numero - 3;
+    printf ("Atual: %d\n", *numero);
 }
